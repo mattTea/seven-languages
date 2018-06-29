@@ -1,0 +1,38 @@
+'irb' to enter the Ruby console
+'exit' to exit Ruby console
+
+'Single quotes' = literal
+"Double quotes" = interpreted
+
+= is for assignment
+== tests for equality
+
+everything but nil and false evaluate to true (including 0!)
+
+&& and || interpreter will execute code only until teh value of the test is clear
+& and | to compare while executing the whole expression
+
+def defines a function but doesn't execute it
+and Ruby does not type check until execution (runtime)... dynamic typing
+
+duck typing... think this means coercing types (i.e. adding a float to an int is ok)
+
+
+Programming Ruby: The Pragmatic Programmer's Guide -> http://ruby-doc.com/docs/ProgrammingRuby/
+
+Arrays
+animals[-2] returns the element second from the end of the array
+
+Code blocks {} or do/end used for iteration, to delay execution, to conditionally execute something
+
+CONVENTIONS
+-----------
+
+Classes start with capital letters and use CamelCase
+Must prepend instance variable with @
+Instance variables and method names begin with lower case in underscore_style
+Constants are ALL_CAPS
+Functions and methods that test typically use a question mark (if test?)
+
+
+A module is a collection of functions and constants (Java, for example, uses 'interfaces' instead of modules)
