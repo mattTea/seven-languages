@@ -36,3 +36,9 @@ Functions and methods that test typically use a question mark (if test?)
 
 
 A module is a collection of functions and constants (Java, for example, uses 'interfaces' instead of modules)
+
+
+DAY 3
+-----
+Metaprogramming... writing programs that write programs!
+
