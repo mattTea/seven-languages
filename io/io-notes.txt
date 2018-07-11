@@ -1,0 +1,70 @@
+Prototype language (prototype programming model)
+------------------------------------------------
+
+Means every object is a clone of another
+
+Won't worry about classes and objects... deal exclusively in objects, cloning as needed.
+These clones are called prototypes.
+
+"Hi ho, Io" print
+- sending the print message to the string here
+- receivers go on the left, messages (or methods) on the right
+- just sending messages to objects
+
+Objects have 'slots' (such as Vehicle 'description' in example)
+(Objects are basically just collections of slots)
+Think of each collection of slots as a hash
+You refer to each slot with a key
+You can use := to assign something to a slot
+If the slot doesn't exist Io will create it
+You can also use = for assignment, but here if the slot doesn't exist Io throws exception
+
+
+Object model
+------------
+
+Objects are containers of slots
+- Get a slot by sending its name to the object, if the slot isn't there, Io just calls the parent
+
+
+Methods
+-------
+
+Creating methods... method is an object too. So can be assigned to a slot...
+Io> Car drive := method("Vroom" println)
+
+If a slot has a method, invoking the slot invokes the method...
+Io> ferrari drive
+Vroom
+==> Vroom
+
+getSlot will get parent's slot if doesn't exist
+can get the prototype of any given object...
+Io> ferrari proto
+==>  Car_0x63f960:
+  drive            = method(...)
+  type             = "Car"
+
+
+Lobby
+-----
+
+Master namespace called 'Lobby' contains all named objects, assignments
+Io> Lobby
+==>  Object_0x40f4e0:
+  Car              = Car_0x63f960
+  Lobby            = Object_0x40f4e0
+  Protos           = Object_0x40ecc0
+  Vehicle          = Vehicle_0x55d3c0
+  _                = Object_0x40f4e0
+  exit             = method(...)
+  ferrari          = Car_0x4c1d50
+  forward          = method(...)
+  set_             = method(...)
+
+
+Basic rules
+-----------
+
+Every thing is an object
+Every interaction with an object is a message
