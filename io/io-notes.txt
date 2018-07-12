@@ -68,3 +68,23 @@ Basic rules
 
 Every thing is an object
 Every interaction with an object is a message
+
+
+Maps
+----
+
+Like Ruby hashes (key:value pairs)
+
+
+Some syntax
+-----------
+
+a ::= 1	newSlot("a", 1)
+a := 1	setSlot("a", 1)
+a = 1	updateSlot("a", 1)
+; concatenates 2 distinct messages
+
+
+if(condition, true code, false code)
+
+OperatorTable - lists operators in order of precedence
