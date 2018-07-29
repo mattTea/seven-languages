@@ -15,4 +15,4 @@ const fib = (n) => {
   }
 }
 
-fib(25);
+fib(5);
