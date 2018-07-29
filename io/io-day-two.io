@@ -1,3 +1,5 @@
+// Iterative method
+
 fibSeq := list(1, 1)
 
 fib := method(n,
@@ -14,4 +16,8 @@ fib := method(n,
   )
 )
 
-fib(5)
+fib(25)
+
+
+// Recursive method
+
