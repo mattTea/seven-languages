@@ -49,13 +49,12 @@ puts "EACH ITERATOR"
 # the .each method can apply an expression to each element of an object, one at a time.
 array = [1,2,3,4,5]
 
-puts "EACH ITERATOR 2"
 array.each do |x|
   x += 10
   print "#{x}"
 end
 
-puts "EACH ITERATOR 3"
+puts "EACH ITERATOR 2"
 odds = [1,3,5,7,9]
 
 odds.each do |odd_num|
