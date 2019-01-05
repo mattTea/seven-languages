@@ -32,48 +32,24 @@ puts get_middle("middle")
 # If there is no index that would make this happen, return -1.
 
 def find_even_index(arr)
-  arr.each_index do |index|
-    if index == 0
-      a = 0
-      b =  
+  i = 0
+  a = 0
+  b = 1
+  for i in 0...arr.length
+    a = arr.slice(0, i).sum
+    b = arr.slice(i + 1, arr.length - 1).sum
+    if a != b && i == arr.length - 1
+      return -1
+    elsif a != b
+      i += 1
     else
-      # 
-    end
-
-    # add all items in the array at positions lower than index -> set equal to 'a'
-    # add all items in the array at positions higher than items -> set equal to 'b'
-    if a == b
-      return item array position
-    else
-      return -1 # <- don't want to do this for all a != b iterations though (just once if none equal)
+      return i
     end
   end
 end
 
-
-arr = {1,2,3,4,3,2,1}
+# arr = [1,2,3,4,3,2,1]
+# arr = [1,100,50,-51,1,1]
+arr = Array(1..100)
 
 puts find_even_index(arr)
-
-
-=begin
-
-think i need to create 2 new arrays... one with the values below index, another with the values above index
--> array.slice(index)
-
-i = 0
-arr.each_index |index| (OR for index in arr...)
-  create these arrays
-  sum all values in each array (a.sum AND b.sum)
-  if sum_arr_a == sum_arr_b
-    return index
-  else
-    index += 1
-  end
-
-  if no index returns true for sum_arr_a == sum_arr_b
-    return -1
-  end
-end
-
-=end
