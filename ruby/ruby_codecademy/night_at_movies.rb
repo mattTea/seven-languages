@@ -1,3 +1,7 @@
+# COMMENT OUT ALTERNATIVES TO RUN
+
+# --- Course example version ---
+
 movies = {
   Memento: 3,
   Primer: 4,
@@ -49,4 +53,67 @@ when 'delete'
   end
 else
   puts "Sorry, I didn't understand you."
+end
+
+
+# --- Case statement example... ----
+
+case language
+  when "JS"
+    puts "Websites!"
+  when "Python"
+    puts "Science!"
+  when "Ruby"
+    puts "Web apps!"
+  else
+    puts "I don't know!"
+end
+
+# --- MY VERSION ---
+
+movies = {
+	amelie: 4  
+}
+
+puts "MOVIE RATINGS"
+puts "What would you like to do?"
+puts "add | update | display | delete"
+choice = gets.chomp
+
+case choice
+  when "add"
+  	puts "Enter the movie title: "
+  	title = gets.chomp
+  	if movies[title.to_sym].nil?
+      puts "What is your rating for #{title}?"
+  		rating = gets.chomp
+      movies[title.to_sym] = rating.to_i
+  		puts "#{title} added!"
+    else
+      puts "Movie already exists!"
+    end
+  when "update"
+  	puts "Enter the movie title: "
+  	title = gets.chomp
+  	if movies[title.to_sym].nil?
+      puts "This movie doesn't exist yet."
+    else
+      puts "What is your new rating for #{title}?"
+      rating = gets.chomp
+      movies[title.to_sym] = rating.to_i
+      puts "Rating updated!"
+    end
+  when "display"
+  	movies.each { |movie, rating| puts "#{movie}: #{rating}" }
+  when "delete"
+  	puts "Which movie would you like to remove?"
+  	title = gets.chomp
+  	if movies[title.to_sym].nil?
+      puts "This movie doesn't exist."
+    else
+      movies.delete(title)
+  		puts "#{title} deleted."
+    end
+	else
+  	puts "Sorry, I didn't understand that command."
 end
