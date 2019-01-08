@@ -50,10 +50,10 @@ end
 
 puts symbols
 
-# .intern (internatlise) is the same as .to_sym (Ruby internatlises the variable as a symbol)
+# .intern (internalise) is the same as .to_sym (Ruby internatlises the variable as a symbol)
 
 
-# hash rocket '=>' has changes since Ruby 1.9, from this...
+# hash rocket '=>' has changed since Ruby 1.9, from this...
 movies = {
 	:deli => "Great dark comedy",
   :amelie => "Feel good French movie"

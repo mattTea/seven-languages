@@ -1,22 +1,9 @@
-def find_even_index(arr)
-  i = 0
-  a = 0
-  b = 1
-  for i in 0...arr.length
-    a = arr.slice(0, i).sum
-    b = arr.slice(i + 1, arr.length - 1).sum
-    if a != b && i == arr.length - 1
-      return -1
-    elsif a != b
-      i += 1
-    else
-      return i
-    end
+def bingo(arr)
+  if arr.include?(2) && arr.include?(9) && arr.include?(14) && arr.include?(15) && arr.include?(7)
+    return "WIN"
+  else
+    return "LOSE"
   end
 end
 
-# arr = [1,2,3,4,3,2,1]
-# arr = [1,100,50,-51,1,1]
-arr = Array(1..100)
-
-puts find_even_index(arr)
+puts bingo([1, 2, 9, 14, 25, 6, 7, 8, 9, 26])

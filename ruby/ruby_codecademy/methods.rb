@@ -48,7 +48,7 @@ end
 
 # ----------------
 
-# Blocks - blocks are like nameless methods
+# Blocks - blocks are like nameless methods (below isn't a block!)
 
 def capitalize(string) 
   puts "#{string[0].upcase}#{string[1..-1]}" # <- negative values count the characters from the end of the string (-1 denotes the last character)
