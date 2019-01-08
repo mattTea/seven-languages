@@ -1,15 +1,8 @@
 # 1.
-=begin
-Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below.
-Index 0 will be considered even.
 
-For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']
-=end
-
-def capitalize(s)
-
+def remove_every_other(arr)
+  # arr.filter { |item| arr.index(item).even? }
+  arr.filter { |item| arr.index(item) % 2 == 0 }
 end
 
-s = "abcdef"
-
-capitalize(s)
+puts remove_every_other(["l", "c", "q", "2", "g", "p", "y", "a", "t", "w", "y", "n", "f", "z", "p", "0", "b", "c", "g"])
