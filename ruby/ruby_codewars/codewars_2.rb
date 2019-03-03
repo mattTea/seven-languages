@@ -27,8 +27,8 @@ def hero(bullets, dragons)
   bullets / 2 >= dragons
 end
 
-4. 
-Strings to Jaden Case... "How Can Mirrors Be Real If Our Eyes Aren't Real"
+# 4. 
+# Strings to Jaden Case... "How Can Mirrors Be Real If Our Eyes Aren't Real"
 class String
   def toJadenCase
     string_array = self.split(" ")
